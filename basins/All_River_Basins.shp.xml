@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<metadata>
+	<idinfo>
+		<citation>
+			<citeinfo>
+				<origin>Steeves, Peter</origin>
+				<origin>Douglas Nebert</origin>
+				<pubdate>1994</pubdate>
+				<title>HUC 1:250,000</title>
+				<edition>1</edition>
+				<geoform Sync="TRUE">vector digital data</geoform>
+				<pubinfo>
+					<pubplace>Reston, Virginia</pubplace>
+					<publish>USGS</publish>
+				</pubinfo>
+				<onlink>&lt;http://water.usgs.gov/lookup/getspatial?huc250k&gt;</onlink>
+				<lworkcit>
+					<citeinfo>
+						<pubinfo>
+						</pubinfo>
+					</citeinfo>
+				</lworkcit>
+				<ftname Sync="TRUE">huc3_250</ftname></citeinfo>
+		</citation>
+		<descript>
+			<abstract>The Geographic Information Retrieval and Analysis System (GIRAS) was developed in the mid 70s to put into digital form a number of data layers which were of interest to the USGS. One of these data layers was the Hydrologic Units. The map is based on the Hydrologic Unit Maps published by the U.S. Geological Survey Office of Water Data Coordination, together with the list descriptions and name of region, subregion, accounting units, and cataloging unit. The hydrologic units are encoded with an eight- digit number that indicates the hydrologic region (first two digits), hydrologic subregion (second two digits), accounting unit (third two digits), and cataloging unit (fourth two digits). The data produced by GIRAS was originally collected at a scale of 1:250K. Some areas, notably major cities in the west, were recompiled at a scale of 1:100K. In order to join the data together and use the data in a geographic information system (GIS) the data were processed in the ARC/INFO GUS software package. Within the GIS, the data were edgematched and the neatline boundaries between maps were removed to create a single data set for the conterminous United States. HUC, GIRAS, Hydrologic Units, 1:250,000</abstract>
+			<purpose>This data set was compiled originally to provide the National Water Quality Assessment (NAWQA) study units with an intermediate- scale river basin boundary for extracting other GIS data layers. The data can also be used for illustration purposes at intermediate or small scales (1:250,000 to 1:2 million).</purpose>
+			<langdata Sync="TRUE">en</langdata></descript>
+		<timeperd>
+			<timeinfo>
+				<rngdates>
+				</rngdates>
+			</timeinfo>
+			<current>1994</current>
+		</timeperd>
+		<status>
+			<progress>Complete</progress>
+			<update>None planned</update>
+		</status>
+		<spdom>
+			<bounding>
+				<westbc>-110.5191</westbc>
+				<eastbc>-100.0221</eastbc>
+				<northbc>41.8958</northbc>
+				<southbc>35.6107</southbc>
+			</bounding>
+			<lboundng><leftbc Sync="TRUE">139768.764854</leftbc><rightbc Sync="TRUE">763021.874449</rightbc><bottombc Sync="TRUE">4093860.569028</bottombc><topbc Sync="TRUE">4546539.559517</topbc></lboundng></spdom>
+		<keywords>
+			<theme>
+				<themekt>None</themekt>
+				<themekey>HUC</themekey>
+				<themekey>Hydrologic Unit</themekey>
+				<themekey>Catalog Unit</themekey>
+			</theme>
+			<place>
+				<placekt>None</placekt>
+				<placekey>Colorado</placekey>
+			</place>
+		</keywords>
+		<ptcontac>
+			<cntinfo>
+				<cntorgp>
+					<cntorg></cntorg>
+					<cntper></cntper>
+				</cntorgp>
+				<cntpos></cntpos>
+				<cntaddr>
+					<addrtype>mailing and physical address</addrtype>
+					<address></address>
+					<city></city>
+					<state></state>
+					<postal></postal>
+					<country></country>
+				</cntaddr>
+				<cntvoice></cntvoice>
+				<cntfax></cntfax>
+				<cntemail></cntemail>
+				<hours></hours>
+			</cntinfo>
+		</ptcontac>
+		<native Sync="TRUE">Microsoft Windows 2000 Version 5.0 (Build 2195) Service Pack 3; ESRI ArcCatalog 8.2.0.700</native>
+		<natvform Sync="TRUE">Shapefile</natvform></idinfo>
+	<dataqual>
+		<attracc>
+		</attracc>
+		<posacc>
+			<horizpa>
+			</horizpa>
+			<vertacc>
+			</vertacc>
+		</posacc>
+		<lineage>
+			<srcinfo>
+				<srccite>
+					<citeinfo>
+						<geoform>map</geoform>
+						<pubinfo>
+						</pubinfo>
+						<lworkcit>
+							<citeinfo>
+								<origin></origin>
+								<pubdate></pubdate>
+								<title></title>
+								<pubinfo>
+									<pubplace></pubplace>
+									<publish></publish>
+								</pubinfo>
+								<onlink></onlink>
+							</citeinfo>
+						</lworkcit>
+					</citeinfo>
+				</srccite>
+				<srcscale>250,000</srcscale>
+				<srctime>
+					<timeinfo>
+						<rngdates>
+						</rngdates>
+					</timeinfo>
+				</srctime>
+				<srccontr>HUC</srccontr>
+			</srcinfo>
+			<procstep>
+				<procdesc>Procedures_Used: The data was recieved as compressed giras tar files representing either a 1:250,000-scale (1:250K) quadrangle or a 1:100,000-scale (1:100K) quadrangle. Each file was named after its respective quadrangle. A coverage of 1:250k quadrangles was used to divide the country up into four sections and get a list of names for each section. Using GIRASARC2, an aml designed to create an ARC/INFO data set (coverage) from a GIRAS file and a corresponding neat line coverage, it was quickly discovered that many of the quad names were to long for the program (i.e. sault_saint_marie) and a generic naming system for files and coverages was incorporated. In 1 of 10 cases, the name of the quadrangle did not correspond with the name of the file. These problems were traced down and corrected (after all four sections were converted there were many files left over...these wound up be all the 1:100k quads which did not have similar names to the 1:250k files). After the files for a given section were all converted into ARC/INFO format, a loop aml was run which copied a coverage and its neatline cover into temporary storage (there was not enough room in info to deal with a large number of files in one directory), attached to that directory, built line topology, and went into the editor, ARCEDIT. In ARCEDIT, the outer edge (original neatline) was selected and deleted an the mathematically-calculated neatline coverage from the GIRASNEAT AML program was copied in using the ARCEDIT GET command. The original neatline was replaced with a calculated neatline because in all cases, the outline of the coverage quad never quite conformed to a "true" neatline causing overlaps and gapes between adjacent maps. The new neatline was connected to the internal arcs where they intersected. Lines which did not quite join the new neatline were extended to the edge with a maximum tolerance of 500 meters. All extensions were made within this tolerance. All arcs which extended beyond the new neatline were clipped off within a 500 meter tolerance as arguments to the CLEAN command into a separate directory. Both the neatline and huc coverages were deleted from the temporary space, and the program looped to the next coverage. Another program was then run which added an item to the .aat called OUTER, went into INFO, and populated the attribute for all arcs composing the new neatline. This was done by reselecting for the identity of the polygon to the left or right of each arc whose value was "1", the identity of the outer "universe" polygon (reselect lpoly# = 1 or rpoly# = 1 in the .aat and calculated outer to = 1). All coverages were checked for additional dangles and then a MAPJOIN was run using NET as the feature option. Finally, most map edge lines were removed from the MAPJOINed coverage using the DISSOLVE to create a seamless basin coverage with polygons (basins) and arcs (boundaries) with attributes. Quality control methods were applied to the resulting coverage by detecting and fixing node and label errors and remaining neat line arc problems (i.e. long neat lines still in the coverage). Many more problems arose in the western part of the country than in the east. Bordering HUC code disagreements between quads caused a number of cases in which neatlines did not dissolve. These were provisionally corrected for the most part, however there were several cases that required external review and editing to fix, and are now incorporated in the final data set. After all 1:250K sections were completed, the same procedure was run for the handful of 1:100k quads. These were mapjoined with the 1:250k quads to provide more detailed coverage where it was available. Revisions: Revision #1. See above for all the details Process_Date 10/92 Revision #2. Seattle and Bakersfield quadrangles were missing from the composite supplied by Pete Steeves. These were manually pasted in using Arcedit with small tolerances. Labelerrors were remedied and most dangles were removed using the Eliminate command. Process_Date 1/93 Revision #3. The following changes were made to a 1:250,000-scale version derived from National Mapping Divisions Geographic Information Retrieval and Analysis System (GIRAS) data. The discrepancies in the hydrologic unit codes (HUCs) in California were changed because the California State Hydrologic Unit Map (HUM) was revised in 1978 but the 1:250,000-scale digital dataset was not. This has been reviewed by Bill Battaglin, Doug Nebert, and Paul Kapinos and is noted under Reviews (#6 below). The areas in which the HUC labels were incorrect in California were 180701, 180702, 180703, 180600, 180300, and 180400. Boundaries were added in 180702 and 180600 from the 1:2 million source. Along the Oregon/California border, a boundary was added in 180102. In Wyoming, a boundary was added in 100902 from the 1:2 million source. Labels were corrected in these HUCs to reflect state updates, and where necessary, to add new labels to the newly-drawn boundaries. Map edges were manually removed in Arkansas, California, and along the Oregon/California border. After the changes were made and saved in Arcedit, the build and clean commands were executed, followed by labelerrors. Three polygons had duplicate labels and were corrected. The labels were centered in the polygons by the centroidlabels command. Verification of the coverage was done by the describe command. Process_Date 12/93. Revision #4. The NAMES file was added to the data set and its attributes were defined in the ATT file of the documentaton. This table is a lookup table to correlate the 8-digit numbers with verbose names officially assigned to the basins. Process_Date 3/94. Revision #5. The following corrections were made to the 1:250,000-scale coverage of Hydrologic Unit Codes (HUC250): Valid HUC code, 7140103, added to HUC250.NAM. Bourbeuse, Missouri. HUC250.NAM was sorted on HUC. HUC frequency &gt;1, tiny polygons were deleted that were erroneous: 17010212 deleted small poly to NW of main poly 10130305 deleted small poly to S of main poly 10230005 deleted small poly to S of main poly 14020001 deleted small poly to N of main poly 15050201 deleted small poly to W of main poly 04080203 deleted small poly to N of main poly 03120001 deleted small poly to S of main poly Invalid HUC codes, not in names file, were corrected: 18020023 HUC should be 18020111 (in N-central California) 18070010 HUC should be 18070303 (in so. California) 15010017 HUC should be 15010007, delete arc separating it (in nw Arizona) 1870201 HUC should be 18070201 (in so. California, missing an 0) 1870204 HUC should be 18070204 (in so. California, missing an 0) 18060012 HUC should be 18060011 (in so. California, improper polygon closure) 18060011 HUC label added after polygon closure of 18060011 HUC frequency &gt;1, larger polys were checked and corrected: 18020126 western poly is 18020108 in HUC2M (CA) 18050005 southern poly is 18050006 in HUC2M (CA) 18060006 split into 2 polys, no apparent reason, delete arc splitting polys (CA) 04110001 and 04100001 together are 04100001 in HUC2M (MI) (MAPEDGE was deleted) 02080108 northwestern poly is 02080208 in HUC2M (VA) The invalid HUC codes, and 7140103 were found by relating to the HUC250.NAM file, and identifying polygons with no match in the names file. The rest were found by looking at the 96 polygons which had HUC codes with frequencies &gt;1 in the PAT. Most of these seemed to be correct, and were along the US-Canada boundary, or were islands along the coasts. These errors were found in the HUC250 coverage published as OFR 94-0326. Process_Date 12/94 &amp; 1/95 Reviews_Applied_to_Data: Peer review, 10/18/93, Bill Battaglin, USGS-WRD, Lakewood, Co, memo to Doug Nebert: "I have completed a review of the 1:250,000 scale hydrologic units coverage (HUC) and found the digital data and metadata to be of high quality. I have a few suggested improvements to the digital data and to the documentation. Below is a summary of the methods I used to check feature accuracy in the digital data base and the problems I found.</procdesc>
+				<proccont>
+					<cntinfo>
+						<cntperp>
+							<cntper></cntper>
+							<cntorg></cntorg>
+						</cntperp>
+						<cntpos></cntpos>
+						<cntaddr>
+							<addrtype>mailing and physical address</addrtype>
+							<address></address>
+							<city></city>
+							<state></state>
+							<postal></postal>
+							<country></country>
+						</cntaddr>
+						<cntvoice></cntvoice>
+						<cntfax></cntfax>
+						<cntemail></cntemail>
+						<hours></hours>
+					</cntinfo>
+				</proccont>
+			</procstep>
+			<procstep><procdesc Sync="TRUE">Dataset copied.</procdesc><srcused Sync="TRUE"></srcused><date Sync="TRUE">20040915</date><time Sync="TRUE">12253000</time></procstep><procstep><procdesc Sync="TRUE">Dataset copied.</procdesc><srcused Sync="TRUE">\\Gisdenver\GIS_DATA\GISFINAL\huc3_250</srcused><date Sync="TRUE">20050318</date><time Sync="TRUE">11432000</time></procstep><procstep><procdesc Sync="TRUE">Dataset copied.</procdesc><srcused Sync="TRUE">C:\GIS\Base_Layers\huc3_250</srcused><procdate Sync="TRUE">20110209</procdate><proctime Sync="TRUE">14320700</proctime></procstep></lineage>
+	</dataqual>
+	<spdoinfo>
+		<direct Sync="TRUE">Vector</direct>
+		<ptvctinf>
+			<sdtsterm Name="huc3_250">
+				<sdtstype Sync="TRUE">G-polygon</sdtstype>
+				<ptvctcnt Sync="TRUE">119</ptvctcnt>
+			</sdtsterm>
+			<esriterm Name="huc3_250"><efeatyp Sync="TRUE">Simple</efeatyp><efeageom Sync="TRUE">Polygon</efeageom><esritopo Sync="TRUE">FALSE</esritopo><efeacnt Sync="TRUE">119</efeacnt><spindex Sync="TRUE">FALSE</spindex><linrefer Sync="TRUE">FALSE</linrefer></esriterm></ptvctinf>
+	</spdoinfo>
+	<spref>
+		<horizsys>
+			<planar>
+				<planci>
+					<plance>Coordinate pair</plance>
+					<coordrep>
+						<absres Sync="TRUE">0.001024</absres><ordres Sync="TRUE">0.001024</ordres></coordrep>
+					<plandu Sync="TRUE">meters</plandu></planci>
+				<gridsys><gridsysn Sync="TRUE">Universal Transverse Mercator</gridsysn><utm><utmzone Sync="TRUE">13</utmzone><transmer><sfctrmer Sync="TRUE">0.999600</sfctrmer><longcm Sync="TRUE">-105.000000</longcm><latprjo Sync="TRUE">0.000000</latprjo><feast Sync="TRUE">500000.000000</feast><fnorth Sync="TRUE">0.000000</fnorth></transmer></utm></gridsys></planar>
+			<geodetic>
+				<horizdn>North American Datum of 1927</horizdn>
+				<ellips>Clarke 1866</ellips>
+				<semiaxis>6378206.4000000</semiaxis>
+				<denflat>294.98</denflat>
+			</geodetic>
+			<cordsysn><geogcsn Sync="TRUE">GCS_North_American_1927</geogcsn><projcsn Sync="TRUE">NAD_1927_UTM_Zone_13N</projcsn></cordsysn></horizsys>
+	</spref>
+	<eainfo>
+		<overview>
+		</overview>
+		<detailed Name="huc3_250"><enttyp><enttypl Sync="TRUE">huc3_250</enttypl><enttypt Sync="TRUE">Feature Class</enttypt><enttypc Sync="TRUE">119</enttypc></enttyp><attr><attrlabl Sync="TRUE">FID</attrlabl><attalias Sync="TRUE">FID</attalias><attrtype Sync="TRUE">OID</attrtype><attwidth Sync="TRUE">4</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale><attrdef Sync="TRUE">Internal feature number.</attrdef><attrdefs Sync="TRUE">ESRI</attrdefs><attrdomv><udom Sync="TRUE">Sequential unique whole numbers that are automatically generated.</udom></attrdomv></attr><attr><attrlabl Sync="TRUE">Shape</attrlabl><attalias Sync="TRUE">Shape</attalias><attrtype Sync="TRUE">Geometry</attrtype><attwidth Sync="TRUE">0</attwidth><atprecis Sync="TRUE">0</atprecis><attscale Sync="TRUE">0</attscale><attrdef Sync="TRUE">Feature geometry.</attrdef><attrdefs Sync="TRUE">ESRI</attrdefs><attrdomv><udom Sync="TRUE">Coordinates defining the features.</udom></attrdomv></attr><attr><attrlabl Sync="TRUE">AREA</attrlabl><attalias Sync="TRUE">AREA</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">12</attwidth><atnumdec Sync="TRUE">3</atnumdec><attrdef>Area of polygon</attrdef><attrdomv><udom>Numeric Field</udom></attrdomv></attr><attr><attrlabl Sync="TRUE">PERIMETER</attrlabl><attalias Sync="TRUE">PERIMETER</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">12</attwidth><atnumdec Sync="TRUE">3</atnumdec><attrdef>Perimeter of polygon</attrdef><attrdomv><udom>Numeric Field</udom></attrdomv></attr><attr><attrlabl Sync="TRUE">HUC250_ALB</attrlabl><attalias Sync="TRUE">HUC250_ALB</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">11</attwidth><attrdef>System Field</attrdef><attrdomv><udom>Numeric Field</udom></attrdomv></attr><attr><attrlabl Sync="TRUE">HUC250_A_1</attrlabl><attalias Sync="TRUE">HUC250_A_1</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">11</attwidth><attrdef>System Field</attrdef><attrdomv><udom>Numeric Field</udom></attrdomv></attr><attr><attrlabl Sync="TRUE">HUC</attrlabl><attalias Sync="TRUE">HUC</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">8</attwidth><attrdef>System Field</attrdef><attrdomv><udom>Numeric Field</udom></attrdomv></attr><attr><attrlabl Sync="TRUE">REGION</attrlabl><attalias Sync="TRUE">REGION</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">2</attwidth><attrdef>Region ID</attrdef><attrdomv><udom>Numeric Field</udom></attrdomv></attr><attr><attrlabl Sync="TRUE">SUBREGION</attrlabl><attalias Sync="TRUE">SUBREGION</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">2</attwidth><attrdef>Subregion ID</attrdef><attrdomv><udom>Numeric Field</udom></attrdomv></attr><attr><attrlabl Sync="TRUE">ACCTUNIT</attrlabl><attalias Sync="TRUE">ACCTUNIT</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">2</attwidth><attrdef>System Field</attrdef><attrdomv><udom>Numeric Field</udom></attrdomv></attr><attr><attrlabl Sync="TRUE">HYDROUNIT</attrlabl><attalias Sync="TRUE">HYDROUNIT</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">2</attwidth><attrdef>System Field</attrdef><attrdomv><udom>Numeric Field</udom></attrdomv></attr><attr><attrlabl Sync="TRUE">AREA_1</attrlabl><attalias Sync="TRUE">AREA_1</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">12</attwidth><atnumdec Sync="TRUE">3</atnumdec><attrdef>System Field</attrdef><attrdomv><udom>Numeric Field</udom></attrdomv></attr><attr><attrlabl Sync="TRUE">PERIMETE_1</attrlabl><attalias Sync="TRUE">PERIMETE_1</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">12</attwidth><atnumdec Sync="TRUE">3</atnumdec><attrdef>System Field</attrdef><attrdomv><udom>Numeric Field</udom></attrdomv></attr><attr><attrlabl Sync="TRUE">HYDRO2M_</attrlabl><attalias Sync="TRUE">HYDRO2M_</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">11</attwidth><attrdef>System Field</attrdef><attrdomv><udom>Numeric Field</udom></attrdomv></attr><attr><attrlabl Sync="TRUE">HYDRO2M_ID</attrlabl><attalias Sync="TRUE">HYDRO2M_ID</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">11</attwidth><attrdef>System ID</attrdef><attrdomv><udom>Numeric Field</udom></attrdomv></attr><attr><attrlabl Sync="TRUE">PLYTYPE</attrlabl><attalias Sync="TRUE">PLYTYPE</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">1</attwidth><attrdef>System Field</attrdef><attrdomv><udom>Numeric Field</udom></attrdomv></attr><attr><attrlabl Sync="TRUE">WORKB</attrlabl><attalias Sync="TRUE">WORKB</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">11</attwidth><attrdef>System Field</attrdef><attrdomv><udom>Numeric Field</udom></attrdomv></attr><attr><attrlabl Sync="TRUE">HU2NAME</attrlabl><attalias Sync="TRUE">HU2NAME</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">30</attwidth><attrdef>System Field</attrdef><attrdomv><udom>Numeric Field</udom></attrdomv></attr><attr><attrlabl Sync="TRUE">HU4NAME</attrlabl><attalias Sync="TRUE">HU4NAME</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">60</attwidth><attrdef>System Field</attrdef><attrdomv><udom>Numeric Field</udom></attrdomv></attr><attr><attrlabl Sync="TRUE">HU6NAME</attrlabl><attalias Sync="TRUE">HU6NAME</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">50</attwidth><attrdef>System Field</attrdef><attrdomv><udom>Numeric Field</udom></attrdomv></attr><attr><attrlabl Sync="TRUE">HU8NAME</attrlabl><attalias Sync="TRUE">HU8NAME</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">60</attwidth><attrdef>System Field</attrdef><attrdomv><udom>Numeric Field</udom></attrdomv></attr><attr><attrlabl Sync="TRUE">SQ_MILES</attrlabl><attalias Sync="TRUE">SQ_MILES</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">8</attwidth><atnumdec Sync="TRUE">2</atnumdec><attrdef>Area</attrdef><attrdomv><udom>Numeric Field</udom></attrdomv></attr><attr><attrlabl Sync="TRUE">HUC2</attrlabl><attalias Sync="TRUE">HUC2</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">2</attwidth><attrdef>System Field</attrdef><attrdomv><udom>Numeric Field</udom></attrdomv></attr><attr><attrlabl Sync="TRUE">HUC4</attrlabl><attalias Sync="TRUE">HUC4</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">4</attwidth><attrdef>System Field</attrdef><attrdomv><udom>Numeric Field</udom></attrdomv></attr><attr><attrlabl Sync="TRUE">HUC6</attrlabl><attalias Sync="TRUE">HUC6</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">6</attwidth><attrdef>System Field</attrdef><attrdomv><udom>Numeric Field</udom></attrdomv></attr><attr><attrlabl Sync="TRUE">REG</attrlabl><attalias Sync="TRUE">REG</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">2</attwidth><attrdef>System Field</attrdef><attrdomv><udom>Numeric Field</udom></attrdomv></attr><attr><attrlabl Sync="TRUE">SUB</attrlabl><attalias Sync="TRUE">SUB</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">4</attwidth><attrdef>System Field</attrdef><attrdomv><udom>Numeric Field</udom></attrdomv></attr><attr><attrlabl Sync="TRUE">ACC</attrlabl><attalias Sync="TRUE">ACC</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">6</attwidth><attrdef>System Field</attrdef><attrdomv><udom>Numeric Field</udom></attrdomv></attr><attr><attrlabl Sync="TRUE">CAT</attrlabl><attalias Sync="TRUE">CAT</attalias><attrtype Sync="TRUE">Number</attrtype><attwidth Sync="TRUE">8</attwidth><attrdef>System Field</attrdef><attrdomv><udom>Numeric Field</udom></attrdomv></attr><attr><attrlabl Sync="TRUE">NRG</attrlabl><attalias Sync="TRUE">NRG</attalias><attrtype Sync="TRUE">String</attrtype><attwidth Sync="TRUE">24</attwidth><attrdef>System Field</attrdef><attrdomv><udom>Numeric Field</udom></attrdomv></attr></detailed></eainfo>
+	<distinfo>
+		<distrib>
+			<cntinfo>
+				<cntorgp>
+					<cntorg></cntorg>
+					<cntper></cntper>
+				</cntorgp>
+				<cntpos></cntpos>
+				<cntaddr>
+					<addrtype>mailing and physical address</addrtype>
+					<address></address>
+					<city></city>
+					<state></state>
+					<postal></postal>
+					<country></country>
+				</cntaddr>
+				<cntvoice></cntvoice>
+				<cntfax></cntfax>
+				<cntemail></cntemail>
+				<hours></hours>
+			</cntinfo>
+		</distrib>
+		<stdorder><digform><digtinfo><transize Sync="TRUE">1.695</transize><dssize Sync="TRUE">1.695</dssize></digtinfo></digform></stdorder><resdesc Sync="TRUE">Downloadable Data</resdesc></distinfo>
+	<metainfo>
+		<metd Sync="TRUE">20030110</metd>
+		<metrd>20020206</metrd>
+		<metc>
+			<cntinfo>
+				<cntorgp>
+				</cntorgp>
+				<cntaddr>
+					<addrtype>Mailing and physical address</addrtype>
+				</cntaddr>
+			</cntinfo>
+		</metc>
+		<metstdn Sync="TRUE">FGDC Content Standards for Digital Geospatial Metadata</metstdn>
+		<metstdv Sync="TRUE">FGDC-STD-001-1998</metstdv>
+		<langmeta Sync="TRUE">en</langmeta><mettc Sync="TRUE">local time</mettc><metextns><onlink Sync="TRUE">http://www.esri.com/metadata/esriprof80.html</onlink><metprof Sync="TRUE">ESRI Metadata Profile</metprof></metextns></metainfo>
+	<Esri><CreaDate>20110209</CreaDate><CreaTime>14320700</CreaTime><SyncOnce>FALSE</SyncOnce><SyncDate>20030110</SyncDate><SyncTime>11333000</SyncTime><ModDate>20030110</ModDate><ModTime>11333000</ModTime><MetaID>{7041F1F3-9CE8-46B8-A433-EE50D2F058A0}</MetaID><DataProperties><lineage><Process ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\DeleteField" Date="20110209" Time="145010">DeleteField C:\GIS\Base_Layers\All_River_Basins.shp SUBREGION;ACCTUNIT;HYDROUNIT;AREA_1;PERIMETE_1;HYDRO2M_;HYDRO2M_ID;PLYTYPE;WORKB;HU2NAME;HU4NAME;HU8NAME;HUC2;HUC4;HUC6;REG;SUB;ACC;CAT;NRG C:\GIS\Base_Layers\All_River_Basins.shp</Process><Process ToolSource="C:\Program Files\ArcGIS\ArcToolbox\Toolboxes\Data Management Tools.tbx\CalculateField" Date="20110209" Time="145133">CalculateField C:\GIS\Base_Layers\All_River_Basins.shp SQ_MILES dArea VB "'=========================\n'polygon_Return_Area.cal\n'Author: Ianko Tchoukanski\n'http://www.ian-ko.com\n'=========================\nDim pMxDoc As IMxDocument\nDim pGeometry As IGeometry\nDim pMap As IMap\nDim pArea As IArea\nDim dArea As Double\nDim dC As Double\nDim sOutMeasure As String\nDim bSrefFromMap As Boolean\n'=======================\n'Adjust the parameters below\n'bSrefFromMap = True ==&gt; the area will be calculated in the projection of the Map\n'bSrefFromMap = False ==&gt; the area will be calculated in the projection of the data\nbSrefFromMap = False\n'unmark the desired output units\n'sOutMeasure = "Acres"\n'sOutMeasure = "Square Kilometers"\n'sOutMeasure = "Square Meters"\nsOutMeasure = "Square Miles"\n'=======================\nIf (IsNull([Shape])) Then\n  dArea = -1\nElse\n  Set pGeometry = [Shape]\n  If (pGeometry.IsEmpty) Then\n    dArea = -1\n  Else\n    If (bSrefFromMap) Then\n      Set pMxDoc = ThisDocument\n      Set pMap = pMxDoc.FocusMap\n      pGeometry.Project pMap.SpatialReference\n      Select Case pMap.MapUnits\n        Case 3 'Feet\n          Select Case sOutMeasure\n            Case "Acres"\n              dC = 0.00002295684\n            Case "Square Kilometers"\n              dC = 0.0000000930787\n            Case "Square Meters"\n              dC = 0.092903\n            Case "Square Miles"\n              dC = 0.0000000359375\n            Case Else\n              dC = 1\n          End Select\n        Case 9 'Meters\n          Select Case sOutMeasure\n            Case "Acres"\n              dC = 0.0002471\n            Case "Square Kilometers"\n              dC = 0.000001\n            Case "Square Meters"\n              dC = 1\n            Case "Square Miles"\n              dC = 0.0000003861022\n            Case Else\n              dC = 1\n          End Select\n        Case Else\n          dC = 1\n      End Select\n    Else\n      dC = 1\n    End If\n    Set pArea = pGeometry\n    dArea = pArea.Area * dC\n  End If\nEnd If\n\n\n\n\n\n" C:\GIS\Base_Layers\All_River_Basins.shp</Process></lineage></DataProperties></Esri><dataIdInfo><envirDesc Sync="TRUE">Microsoft Windows 2000 Version 5.0 (Build 2195) Service Pack 3; ESRI ArcCatalog 8.2.0.700</envirDesc><dataLang><languageCode Sync="TRUE" value="en"></languageCode></dataLang><idCitation><resTitle Sync="TRUE">huc3_250</resTitle><presForm><PresFormCd Sync="TRUE" value="005"></PresFormCd></presForm></idCitation><spatRpType><SpatRepTypCd Sync="TRUE" value="001"></SpatRepTypCd></spatRpType><geoBox esriExtentType="native"><westBL Sync="TRUE">139768.764854</westBL><eastBL Sync="TRUE">763021.874449</eastBL><northBL Sync="TRUE">4546539.559517</northBL><southBL Sync="TRUE">4093860.569028</southBL><exTypeCode Sync="TRUE">1</exTypeCode></geoBox><geoBox esriExtentType="decdegrees"><westBL Sync="TRUE">-109.28212</westBL><eastBL Sync="TRUE">-101.871472</eastBL><northBL Sync="TRUE">41.072</northBL><southBL Sync="TRUE">36.923805</southBL><exTypeCode Sync="TRUE">1</exTypeCode></geoBox></dataIdInfo><mdLang><languageCode Sync="TRUE" value="en"></languageCode></mdLang><mdStanName Sync="TRUE">ISO 19115 Geographic Information - Metadata</mdStanName><mdStanVer Sync="TRUE">DIS_ESRI1.0</mdStanVer><mdChar><CharSetCd Sync="TRUE" value="004"></CharSetCd></mdChar><mdHrLv><ScopeCd Sync="TRUE" value="005"></ScopeCd></mdHrLv><mdHrLvName Sync="TRUE">dataset</mdHrLvName><distInfo><distributor><distorTran><onLineSrc><orDesc Sync="TRUE">002</orDesc><linkage Sync="TRUE">file://\\CWCBDENGIS2PC\C$\GIS\Base_Layers\huc3_250Copy</linkage><protocol Sync="TRUE">Local Area Network</protocol></onLineSrc><transSize Sync="TRUE">1.695</transSize></distorTran><distorFormat><formatName Sync="TRUE">Shapefile</formatName></distorFormat></distributor></distInfo><refSysInfo><RefSystem><refSysID><identCode Sync="TRUE">NAD_1927_UTM_Zone_13N</identCode></refSysID></RefSystem></refSysInfo><spatRepInfo><VectSpatRep><topLvl><TopoLevCd Sync="TRUE" value="001"></TopoLevCd></topLvl><geometObjs Name="huc3_250"><geoObjTyp><GeoObjTypCd Sync="TRUE" value="001"></GeoObjTypCd></geoObjTyp><geoObjCnt Sync="TRUE">119</geoObjCnt></geometObjs></VectSpatRep></spatRepInfo><mdDateSt Sync="TRUE">20030110</mdDateSt></metadata>
